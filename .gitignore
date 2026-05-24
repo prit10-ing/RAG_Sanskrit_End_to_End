@@ -41,14 +41,8 @@ vector_db/
 chroma/
 
 # ── Raw data & uploaded documents ────────────────────────────────────────────
-data/raw/
-data/processed/
-*.pdf
-*.docx
-*.txt
-!requirements.txt
-!README.md
-!info.txt
+
+
 
 # ── ML model cache ────────────────────────────────────────────────────────────
 .cache/
