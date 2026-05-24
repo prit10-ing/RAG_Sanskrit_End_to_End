@@ -1,0 +1,52 @@
+RAG Pipeline — HuggingFace + Chroma + LangChain
+===============================================
+
+QUICK START
+-----------
+1.  pip install -r requirements.txt
+2.  Copy your PDF files into  data/raw/
+3.  python app.py --ingest          ← builds the vector store (run once)
+4.  python app.py --query "..."     ← single question
+    python app.py                   ← interactive Q&A loop
+
+FOLDER STRUCTURE
+----------------
+app.py                      Main entry point
+requirements.txt
+data/
+  raw/                      Drop your PDFs here
+src/
+  config.py                 All settings (LLM, chunking, paths, …)
+  utils/
+    logger.py               Centralised logging setup
+  data_ingestion/
+    load_documents.py       Loads PDFs → LangChain Documents
+  preprocessing/
+    text_splitter.py        Splits documents into chunks
+  embeddings/
+    vectore_store.py        Chroma DB — build & load
+  retrieval/
+    retrival.py             Similarity retriever
+  llm/
+    llm_model.py            HuggingFace LLM (ChatHuggingFace)
+  pipeline/
+    rag_pipeline.py         Wires every module end-to-end
+  tests/
+    test_pipeline.py        Unit tests
+
+RUNNING TESTS
+-------------
+  python -m pytest src/tests/ -v
+
+ENVIRONMENT VARIABLES  (.env)
+-----------------------------
+HUGGINGFACEHUB_API_TOKEN=hf_...   (required)
+LLM_REPO_ID=openai/gpt-oss-120b:groq
+LLM_MAX_NEW_TOKENS=400
+LLM_TEMPERATURE=0.3
+EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+CHUNK_SIZE=500
+CHUNK_OVERLAP=50
+RETRIEVAL_K=3
+DATA_FOLDER=data/raw
+VECTOR_DB_DIR=vector_db

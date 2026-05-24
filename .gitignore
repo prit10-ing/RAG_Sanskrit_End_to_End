@@ -1,0 +1,99 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+sdist/
+develop-eggs/
+.eggs/
+lib/
+lib64/
+parts/
+var/
+*.manifest
+*.spec
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Vector database (ChromaDB / FAISS) ───────────────────────────────────────
+vector_db/
+*.faiss
+*.pkl
+chroma/
+
+# ── Raw data & uploaded documents ────────────────────────────────────────────
+data/raw/
+data/processed/
+*.pdf
+*.docx
+*.txt
+!requirements.txt
+!README.md
+!info.txt
+
+# ── ML model cache ────────────────────────────────────────────────────────────
+.cache/
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+sentence_transformers/
+huggingface/
+~/.cache/huggingface/
+
+# ── Jupyter notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── IDE / editors ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Miscellaneous ─────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
