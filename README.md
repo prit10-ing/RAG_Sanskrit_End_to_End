@@ -31,8 +31,9 @@ This system ingests Sanskrit PDF documents, chunks and embeds them using a multi
 ## Project Structure
 
 ```
-rag_project/
-├── app.py                        # Main entry point
+rag_project_pritesh/
+├── main.py  # Main entry point
+|___app.py                    
 ├── requirements.txt
 ├── README.md
 ├── info.txt
@@ -54,8 +55,7 @@ rag_project/
     │   └── llm_model.py          # HuggingFace LLM (ChatHuggingFace)
     ├── pipeline/
     │   └── rag_pipeline.py       # End-to-end RAG chain
-    └── tests/
-        └── test_pipeline.py      # Unit tests (pytest)
+    
 ```
 
 ---
@@ -153,15 +153,6 @@ Starts a prompt loop. Type `exit` or `quit` to stop.
 
 ---
 
-## Running Tests
-
-```bash
-python -m pytest src/tests/ -v
-```
-
-Tests cover: DocumentLoader validation, TextSplitter edge cases, LLMModel input guards, Retriever configuration checks.
-
----
 
 ## Architecture Summary
 
